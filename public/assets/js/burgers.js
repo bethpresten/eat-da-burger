@@ -1,11 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
   $(".change-devour").on("click", function (event) {
-    const id = $(this).data("id");
-    const newDevour = $(this).data("new-devour");
+    let id = $(this).data("id");
+    let newDevour = $(this).data("new-devour");
 
-    const notDevourBurger = {
-      devour: notDevour
+    let notDevourBurger = {
+      devour: newDevour
     };
 
     // Send the PUT request.
@@ -14,7 +14,7 @@ $(function () {
       data: notDevourBurger
     }).then(
       function () {
-        console.log("changed devoured to", notDevour);
+        console.log("changed devoured to", notDevourBurger);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -25,7 +25,7 @@ $(function () {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newBurger = {
+    let newBurger = {
       name: $("#ca").val().trim(),
       devour: $("[name=devour]:checked").val().trim()
     };

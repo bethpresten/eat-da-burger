@@ -17,7 +17,7 @@ function objToSql(ob) {
 
   // loop through the keys and push the key/value as a string int arr
   for (let key in ob) {
-    var value = ob[key];
+    let value = ob[key];
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
       // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
@@ -44,7 +44,7 @@ const orm = {
     });
   },
   create: function (table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+    let queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
