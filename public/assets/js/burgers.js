@@ -4,7 +4,7 @@ $(function () {
     let id = $(this).data("id");
 
     let changeState = {
-      isDevoured: true
+      devour: true
     };
     console.log(changeState);
 
@@ -27,7 +27,7 @@ $(function () {
 
     let newBurger = {
       name: $("#ca").val().trim(),
-      isDevoured: false,
+      devour: false,
     };
 
     // Send the POST request.

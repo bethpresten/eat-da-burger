@@ -22,3 +22,22 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+  margin-top: 20px;
+}
+
+.flex-child:first-child {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+body {
+  font-family: "Nerko One", cursive;
+}
