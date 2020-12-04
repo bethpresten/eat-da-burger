@@ -4,25 +4,29 @@
 
 <h1>Delicious Burgers!</h1>
 
-<h2>Burgers that are not devoured!  Are you hungry?</h2>
+<h2>Are you hungry?</h2>
 
 <ul>
   {{#each burgers}}
-    {{#unless devour}}
+    {{#unless isDevoured}}
       {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers that are devoured!  So sad!</h2>
+<h2>Burgers that have been eaten!  So sad!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if devour}}
+    {{#if isDevoured}}
       {{> burgers/burger-block devour=false}}
     {{/if}}
   {{/each}}
 </ul>
+
+
+
+
 
 <h2>Add a Burger</h2>
 <form class="create-form">
