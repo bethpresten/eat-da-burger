@@ -1,0 +1,1 @@
+UPDATE burgers SET devour=true WHERE id = 4;

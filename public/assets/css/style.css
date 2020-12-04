@@ -41,3 +41,18 @@ li {
 body {
   font-family: "Nerko One", cursive;
 }
+
+.burger-form {
+  border: 2px solid white;
+  padding: 20px;
+}
+
+#burger-button {
+  display: inline-block !important;
+  margin: 5px;
+  background-color: #ffd7a1;
+  border: 3px solid black;
+  border-radius: 12px;
+  padding: 8px;
+  font-family: "Nerko One", cursive;
+}
