@@ -1,16 +1,14 @@
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-
+{{!-- // image of the burger --}}
 <div class="burger image text-center">
           <img src="https://s01.sgp1.cdn.digitaloceanspaces.com/article/143395-pysnzzzleh-1593090551.jpg" width="333" height="200" alt="burger image">
       </div>
-
+{{!-- // main html page --}}
 <h1>Delicious Burgers!</h1>
 
 <div class="burger-form">
   <h2>Add a Burger</h2>
 <form class="create-form">
-
+{{!-- //submitting the burger --}}
   <div class="form-group">
     <label for="ca">Burger Type:</label>
     <input type="text" id="ca" name="name">
@@ -24,25 +22,26 @@
 <div class="flex-container">
   <div class="flex-child">
     <h2>Are you hungry?</h2>
-<ul>
+    {{!-- // changing the burgers to the devoured column --}}
+<ol>
   {{#each burgers}}
     {{#unless devour}}
       {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
   </div>
   
   <div class="flex-child">
     <h2>Burgers that have been eaten!</h2>
 
-<ul>
+<ol>
   {{#each burgers}}
     {{#if devour}}
       {{> burgers/burger-block devour=false}}
     {{/if}}
   {{/each}}
-</ul
+</ol
   </div>
   
 </div>
